@@ -5,31 +5,31 @@
 include ('conectar_db.php');
 
 $nome = $_POST['nome'];
-$nasc=$_POST['nasc'];
+$data_de_nascimento=$_POST['data_de_nascimento'];
 $email=$_POST['email'];
 $num=$_POST['telefone'];
 $sexo=$_POST['sexo'];
 $cpf=$_POST['cpf'];
-$vaga=$_POST['vaga'];
-$dataEntrada =$_POST['data_entrada'];
-$dataSaida=$_POST['data_saida'];
-$periodoEstimado=$_POST['periodo_estimado'];
-$periodoTotal=$_POST['periodo_total'];
-$valorEstimado=$_POST['valor_estimado'];
+$endereco=$_POST['endereco'];
+$n_endereco =$_POST['n_endereco'];
+$cpf=$_POST['cep'];
+$bairro=$_POST['bairro'];
+$cidade=$_POST['cidade'];
+$estado=$_POST['estado'];
 
 
 
 
 
 
-$sqlc = "INSERT INTO tbclientes (nomeCli, nasc, emailCli, telefoneCli, sexoCli,cpfCli)
-VALUES ('$nome', '$nasc','$email','$num','$sexo','$cpf')";
+$sqlc = "INSERT INTO tbcadastromd (nomeCompleto, datadeNascimento, email, telefone, sexo, ncpf, endereco, n_endereco, cep, bairro, cidade, estado )
+VALUES ('$nome', '$data_de_nascimento','$email','$num','$sexo','$cpf','$endereco','$n_endereco','$cpf','$bairro','$cidade','$estado')";
 
 
 
-    $sqlv = "UPDATE tbvagas
+  /*  $sqlv = "UPDATE tbvagas
     SET statusVag = 'Ocupado'
-    WHERE  vaga = '$vaga'";  
+    WHERE  vaga = '$vaga'";*/  
 
 
 
@@ -37,8 +37,8 @@ $sqlcp = "INSERT INTO  tbcupons (dataEntrada,dataSaida,periodoEstimado,periodoTo
 VALUES ('$dataEntrada','$dataSaida','$periodoEstimado','$periodoTotal','$valorEstimado')";
 
 $resultc = mysqli_query($conexao,$sqlc);
-$resultv = mysqli_query($conexao,$sqlv);
-$resultcp = mysqli_query($conexao,$sqlcp);
+/*$resultv = mysqli_query($conexao,$sqlv);
+$resultcp = mysqli_query($conexao,$sqlcp);*/
 
 
 

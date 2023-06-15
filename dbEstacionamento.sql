@@ -1,6 +1,6 @@
--- Active: 1683812971260@@127.0.0.1@3306@dbestacionamento
+-- Active: 1686828955525@@127.0.0.1@3306@phpmyadmin
 
-drop database dbestacionamento;
+
 
 
 create database dbestacionamento;

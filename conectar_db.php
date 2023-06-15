@@ -1,9 +1,9 @@
 <?php
 
-$dbhostname = '10.23.45.24';
+$dbhostname = 'localhost';
 $dbusuario = 'root';
 $dbsenha='';
-$dbname='dbestacionamento';
+$dbname='dbbaseDeTeste';
 
 $conexao = mysqli_connect ($dbhostname, $dbusuario, $dbsenha, $dbname);
 
