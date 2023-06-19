@@ -19,11 +19,23 @@ $estado=$_POST['estado'];
 
 
 
+if (isset ($_POST['cadastro'])) {
+
+  $sqlc = "INSERT INTO tbcadastromd (nomeCompleto, datadeNascimento, email, telefone, sexo, ncpf, endereco, n_endereco, cep, bairro, cidade, estado )
+  VALUES ('$nome', '$data_de_nascimento','$email','$num','$sexo','$cpf','$endereco','$n_endereco','$cpf','$bairro','$cidade','$estado')";
+
+  $resultc = mysqli_query($conexao,$sqlc);
+
+}else {
+  
+  header('location: formas.html');
+  echo  "<script>alert('Selecione o botão de cadastro');</script>";
+
+  
+}
 
 
 
-$sqlc = "INSERT INTO tbcadastromd (nomeCompleto, datadeNascimento, email, telefone, sexo, ncpf, endereco, n_endereco, cep, bairro, cidade, estado )
-VALUES ('$nome', '$data_de_nascimento','$email','$num','$sexo','$cpf','$endereco','$n_endereco','$cpf','$bairro','$cidade','$estado')";
 
 
 
@@ -33,10 +45,10 @@ VALUES ('$nome', '$data_de_nascimento','$email','$num','$sexo','$cpf','$endereco
 
 
 
-$sqlcp = "INSERT INTO  tbcupons (dataEntrada,dataSaida,periodoEstimado,periodoTotal,valorEstimado)
-VALUES ('$dataEntrada','$dataSaida','$periodoEstimado','$periodoTotal','$valorEstimado')";
+//$sqlcp = "INSERT INTO  tbcupons (dataEntrada,dataSaida,periodoEstimado,periodoTotal,valorEstimado)
+//VALUES ('$dataEntrada','$dataSaida','$periodoEstimado','$periodoTotal','$valorEstimado')";
 
-$resultc = mysqli_query($conexao,$sqlc);
+
 /*$resultv = mysqli_query($conexao,$sqlv);
 $resultcp = mysqli_query($conexao,$sqlcp);*/
 

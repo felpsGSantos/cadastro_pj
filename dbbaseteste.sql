@@ -1,4 +1,4 @@
--- Active: 1686828955525@@127.0.0.1@3306@phpmyadmin
+-- Active: 1683856497522@@127.0.0.1@3306@phpmyadmin
 drop database dbbaseDeTeste;
 create database dbbaseDeTeste;
 
@@ -14,7 +14,7 @@ telefone varchar (30),
 sexo varchar(15),
 ncpf varchar(15),
 endereco varchar(50),
-n_enderco char (4),
+n_endereco char (4),
 cep varchar(20),
 bairro varchar(30),
 cidade varchar(40),
