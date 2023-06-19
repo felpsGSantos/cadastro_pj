@@ -1,4 +1,4 @@
--- Active: 1683856497522@@127.0.0.1@3306@phpmyadmin
+-- Active: 1686828955525@@127.0.0.1@3306@phpmyadmin
 drop database dbbaseDeTeste;
 create database dbbaseDeTeste;
 
@@ -19,5 +19,6 @@ cep varchar(20),
 bairro varchar(30),
 cidade varchar(40),
 estado varchar(30),
+senha varchar(50),
 primary key (codCad)
 );
