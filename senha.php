@@ -1,3 +1,13 @@
+<?php
+
+if (isset($_GET['incorreto'])) {
+    $senhaincompativel = $_GET['incorreto'];
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,8 +46,27 @@
     </form>
 
 
+    <script>
+
+    <?php if (isset($senhaincompativel)): ?>
+        alert("<?php echo $senhaincompativel; ?>");
+        <?php unset($_GET['incorreto']); ?>
+        window.location.href = "<?php echo strtok($_SERVER["REQUEST_URI"], '?'); ?>";
+    <?php endif; ?>    
+        
+    
+
+
+
+    </script>
+
+
+
 
 </div>
+
+    
+
 
 
 
